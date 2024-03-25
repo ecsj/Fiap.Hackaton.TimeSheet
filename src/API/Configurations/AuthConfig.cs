@@ -8,10 +8,7 @@ public static class AuthConfig
     public static void AddJwtConfiguration(this IServiceCollection services,
         IConfiguration configuration)
     {
-        var appSettingsSection = configuration.GetSection("AppSettings");
-        services.Configure<AppSettings>(appSettingsSection);
-
-        var appSettings = appSettingsSection.Get<AppSettings>();
+       
         var key = Encoding.ASCII.GetBytes("MEUSEGREDOSUPERSECRETOADADA#!@@!");
 
         services.AddAuthentication(x =>

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZNsfXFp3DjtwMXA5sXaSjtuNu6YBWmQbHV1yaRjQMf7SXKItpTp+2vG8p6L7IgQ9tmzrZcobXvQ68kcvLiigQg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ecsj\\OneDrive\\Área de Trabalho\\Fiap\\Timesheet\\Fiap.Hackaton.Timesheet\\src\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ecsj\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\ecsj\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\ecsj\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

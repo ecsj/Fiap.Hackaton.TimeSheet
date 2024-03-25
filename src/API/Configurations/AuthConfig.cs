@@ -12,7 +12,7 @@ public static class AuthConfig
         services.Configure<AppSettings>(appSettingsSection);
 
         var appSettings = appSettingsSection.Get<AppSettings>();
-        var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+        var key = Encoding.ASCII.GetBytes("MEUSEGREDOSUPERSECRETOADADA#!@@!");
 
         services.AddAuthentication(x =>
         {
@@ -28,8 +28,8 @@ public static class AuthConfig
                 IssuerSigningKey = new SymmetricSecurityKey(key),
                 ValidateIssuer = true,
                 ValidateAudience = true,
-                ValidAudience = appSettings.ValidAt,
-                ValidIssuer = appSettings.Emissor
+                ValidAudience = "https://localhost",
+                ValidIssuer = "FiapHackatonSA"
             };
         });
     }

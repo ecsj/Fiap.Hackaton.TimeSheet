@@ -13,10 +13,7 @@ Infra.Dependencies.ConfigureServices(builder.Configuration, builder.Services);
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwaggerConfiguration();
-}
+app.UseSwaggerConfiguration();
 
 app.UseHttpsRedirection();
 

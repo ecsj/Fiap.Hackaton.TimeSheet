@@ -15,11 +15,12 @@ namespace Infra.Migrations
                 name: "TimeRecord",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    EntryTime = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    ExitTime = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    TotalHours = table.Column<TimeSpan>(type: "interval", nullable: false),
-                    EmployeeId = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    EntryTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ExitTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TotalHours = table.Column<TimeSpan>(type: "time", nullable: false),
+                    TotalHoursIntervals = table.Column<TimeSpan>(type: "time", nullable: false),
+                    EmployeeId = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -30,11 +31,11 @@ namespace Infra.Migrations
                 name: "Intervals",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    IntervalType = table.Column<int>(type: "integer", nullable: false),
-                    EntryTime = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    ExitTime = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
-                    TimeRecordId = table.Column<Guid>(type: "uuid", nullable: true)
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IntervalType = table.Column<int>(type: "int", nullable: false),
+                    EntryTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ExitTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    TimeRecordId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {

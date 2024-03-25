@@ -147,3 +147,4 @@ C:\Users\ecsj\OneDrive\Área de Trabalho\Fiap\Timesheet\Fiap.Hackaton.Timesheet\
 C:\Users\ecsj\OneDrive\Área de Trabalho\Fiap\Timesheet\Fiap.Hackaton.Timesheet\src\API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\ecsj\OneDrive\Área de Trabalho\Fiap\Timesheet\Fiap.Hackaton.Timesheet\src\API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\ecsj\OneDrive\Área de Trabalho\Fiap\Timesheet\Fiap.Hackaton.Timesheet\src\API\bin\Debug\net8.0\RestSharp.dll
+C:\Users\ecsj\OneDrive\Área de Trabalho\Fiap\Timesheet\Fiap.Hackaton.Timesheet\src\API\obj\Debug\net8.0\API.sourcelink.json

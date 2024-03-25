@@ -8,11 +8,7 @@ public static class AuthConfig
     public static void AddJwtConfiguration(this IServiceCollection services,
         IConfiguration configuration)
     {
-        var appSettingsSection = configuration.GetSection("AppSettings");
-        services.Configure<AppSettings>(appSettingsSection);
-
-        var appSettings = appSettingsSection.Get<AppSettings>();
-        var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+        var key = Encoding.ASCII.GetBytes(Environment.GetEnvironmentVariable("AUTH_SECRET"));
 
         services.AddAuthentication(x =>
         {
@@ -28,8 +24,8 @@ public static class AuthConfig
                 IssuerSigningKey = new SymmetricSecurityKey(key),
                 ValidateIssuer = true,
                 ValidateAudience = true,
-                ValidAudience = appSettings.ValidAt,
-                ValidIssuer = appSettings.Emissor
+                ValidAudience = Environment.GetEnvironmentVariable("AUTH_VALIDAT"),
+                ValidIssuer = Environment.GetEnvironmentVariable("AUTH_EMISSOR")
             };
         });
     }

@@ -8,7 +8,7 @@ using System.Security.Claims;
 namespace API.Controllers
 {
     [ApiController]
-    //[Authorize]
+    [Authorize]
     [Route("[controller]")]
     public class TimeRecordController : ControllerBase
     {
@@ -17,8 +17,6 @@ namespace API.Controllers
         public async Task<IActionResult> RecordTime([FromServices] ITimeRecordUseCase useCase)
         {
             var employeeId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            employeeId = "123456";
 
             var result = await useCase.RecordTime(employeeId);
 
@@ -30,8 +28,6 @@ namespace API.Controllers
         {
             var employeeId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            employeeId = "123456";
-
             var result = await useCase.GetRecordTime(employeeId, filter);
 
             return Ok(result);
@@ -41,8 +37,6 @@ namespace API.Controllers
         public async Task<IActionResult> GenerateEmail([FromServices] ITimeRecordUseCase useCase, [FromQuery] Filter filter)
         {
             var employeeId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            employeeId = "123456";
 
             var result = await useCase.GenerateRecordTimeEmail(employeeId, filter);
 
